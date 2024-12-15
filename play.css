@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    width: 100%;
+    background-image: linear-gradient(40deg, rgba(12, 97, 136, 0.678), rgba(22, 172, 218, 0.699));
+    color: white;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.226);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block01{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+.container-show-choices{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+.choice-player1,.choice-player2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.choice-player1 .box-title,.choice-player2 .box-title{
+    margin: 30px;
+}
+.container-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-buttons .box-button button{
+    margin: 40px;
+    width: 100px;
+    height: 30px;
+    font-size: larger;
+    border-radius: 5px;
+    font-size: larger;
+    color: white;
+    background-image: linear-gradient(40deg, rgba(26, 134, 161, 0.678), rgba(39, 198, 226, 0.699));
+    box-shadow: 0px 6px rgb(11, 88, 124);
+    cursor: pointer;
+}
+.container-buttons .box-button button:hover{
+    filter: brightness(0.8);
+    transform: scale(0.9);
+}
+.card-choices{
+    background-color: white;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    border: 2px solid gray;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 560px;
+    height: 500px;
+    border-radius: 10px;
+    filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.267));
+    animation: show 500ms ease-in-out;
+}
+.card-choices .box-title{
+    margin: 40px;
+}
+.background{
+    filter: blur(20px);
+}
+.card-winner{
+    background-color: white;
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid gray;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 560px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.267));
+    transition: all 500ms ease-in-out;
+}
+.card-winner .box-button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#back{
+    width: 100px;
+    height: 30px;
+    font-size: larger;
+    border-radius: 5px;
+    font-size: larger;
+    color: white;
+    background-image: linear-gradient(40deg, rgba(26, 134, 161, 0.678), rgba(39, 198, 226, 0.699));
+    box-shadow: 0px 6px rgb(11, 88, 124);
+    cursor: pointer;
+}
+#new{
+    width: 200px;
+    height: 30px;
+    font-size: larger;
+    border-radius: 5px;
+    font-size: larger;
+    color: white;
+    background-image: linear-gradient(40deg, rgba(26, 134, 161, 0.678), rgba(39, 198, 226, 0.699));
+    box-shadow: 0px 6px rgb(11, 88, 124);
+    cursor: pointer;
+}
+
+#back:hover,#new:hover{
+    animation: shake 400ms linear;
+}
+
+/* Animações */
+
+@keyframes show{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    25%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+ /*respondsividade */
+
+ @media(max-width:900px){
+    .card-choices{
+        width: 400px;
+        height: 530px;
+        top: 20%;
+    }
+    .card-choices .box-button{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-choices button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 7px;
+        padding-right: 7px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .container-buttons .box-button button:hover{
+        filter: brightness(1);
+        transform: scale(1);
+    }
+    #image-choice-player1{
+        height: 200px;
+        width: 180px;
+    }
+    #image-choice-player2{
+        height: 200px;
+        width: 180px;
+    }
+    .card-winner{
+        width: 400px;
+    }
+ }

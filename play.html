@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="play.css">
+    <title>Selega Pô</title>
+</head>
+<body>
+    <main class="background" id="background">
+        <header>
+            <h1>Selega Pô</h1>
+        </header>
+        <section class="block01">
+            <div class="container-show-choices">
+                <div class="choice-player1">
+                    <div class="box-title">
+                        <h2 id="name-player1"></h2>
+                    </div>
+                    <div class="box-image" id="box-image-player1">
+                        <img id="image-choice-player1">
+                    </div>
+                </div>
+                <div class="choice-player2">
+                    <div class="box-title">
+                        <h2 id="name-player2"></h2>
+                    </div>
+                    <div class="box-image" id="box-image-player2">
+                        <img id="image-choice-player2">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="card-choices" id="card-choices">
+        <div class="box-title">
+            <h2 id="card-name-player"></h2>
+        </div>
+        <div class="box-image">
+            <img src="./images/pedra-papel-tesoura.png" alt="imagem-pedra-papel-tesoura">
+        </div>
+        <div class="container-buttons">
+            <div class="box-button">
+                <button onclick="manipulation_choice.insertChoice('pedra')">Pedra</button>
+                <button onclick="manipulation_choice.insertChoice('papel')">Papel</button>
+                <button onclick="manipulation_choice.insertChoice('tesoura')">Tesoura</button>
+            </div>
+        </div>
+    </div>
+    <div class="card-winner" id="card-winner">
+        <div class="box-title">
+            <h2 id="place-winner">Texto</h2>
+        </div>
+        <div class="box-image">
+            <img  alt="imagem-vencedor" width="400px" height="400px" id="image-winner">
+        </div>
+        <div class="box-button">
+            <a href="index.html"><button id="back">Voltar</button></a>
+            <a href="play.html"><button id="new">Jogar novamente</button></a>
+        </div>
+    </div>
+    <script src="play.js"></script>
+</body>
+</html>

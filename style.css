@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+header{
+    width: 100%;
+    background-image: linear-gradient(40deg, rgba(12, 97, 136, 0.678), rgba(22, 172, 218, 0.699));
+    color: white;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.226);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.btn-rules{
+    width: 110px;
+    height: 30px;
+    font-size: medium;
+    font-size: large;
+    background-image: linear-gradient(75deg, rgb(207, 206, 206), rgb(211, 208, 208));
+    border-radius: 5px;
+    box-shadow: 0px 5px gray;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+.btn-rules:hover{
+    filter: brightness(1.08);
+}
+.block01{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card-rules{
+    position: absolute;
+    top: -50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 600px;
+    height: 150px;
+    background-color: white;
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.377));
+    transition: all 700ms ease-in-out;
+    z-index: 4;
+}
+.card-rules .box-upper-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.box-upper-card .box-button button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    font-size: large;
+    background-color: rgb(213, 229, 245);
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.247));
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.card-rules .box-lowwer-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.text{
+    width: 85%;
+    font-size: larger;
+    padding: 20px;
+}
+.container{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container .box-title{
+    margin-top: 40px;
+    letter-spacing: 0.5px;
+}
+.container-inputs{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.box-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    flex-direction: column;
+    position: relative;
+}
+label{
+    color: rgb(73, 72, 72);
+    font-size: larger;
+    position: absolute;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+.box-input input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    height: 30px;
+    width: 250px;
+    font-size: larger;
+    transition: all 500ms ease-in-out;
+}
+.box-input input:valid,.box-input input:focus{
+    border-bottom: 1px solid cornflowerblue;
+}
+.box-input input:valid ~ label,.box-input input:focus ~ label{
+    transform: translateY(-24px);
+    font-size: medium;
+}
+.container-play{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-play{
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: larger;
+    color: white;
+    background-image: linear-gradient(40deg, rgba(26, 134, 161, 0.678), rgba(39, 198, 226, 0.699));
+    box-shadow: 0px 6px rgb(11, 88, 124);
+    display: none;
+    cursor: pointer;
+    animation: show 500ms ease-in-out;
+    animation: shake 300ms linear;
+}
+
+/* animações */
+
+@keyframes show {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes shake {
+    25%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+/* responsividade */
+
+@media(max-width:900px){
+    #player01,#player02{
+        width: 170px;
+    }
+    .card-rules{
+        width: 400px;
+        height: 200px;
+    }
+}
